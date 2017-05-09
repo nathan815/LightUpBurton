@@ -1,0 +1,22 @@
+{
+    "0": { 
+        "q": "How did you get started doing this?",
+        "a": "Shortly after Christmas 2016, I began watching other people's Christmas light displays on YouTube. I was intrigued by the precision of many of them &mdash; namely, Matt Johnson's and Tom BetGeorge's &mdash; and the technology behind them. I decided that I wanted to try something like this, so I started researching. I joined the Do It Yourself Christmas forums and found out as much as I could. Eventually, I found myself planning our first show, purchasing parts, sequencing... This is quite a fun hobby to get in to! <br>&mdash;Nathan"
+    },
+    "1": {
+        "q": "Exactly how many lights are in the display?",
+        "a": "There are 850 pixel lights, and 400 traditional LED/incandescent lights. More are planned for next year!"
+    },
+    "2": {
+        "q": "You have your own radio station... what!?",
+        "a": "Not quite! We have a small FM transmitter set up to transmit the music from the show computer to your car radio, broadcasting on an open frequency. It only transmits a few hundred feet, so you have to actually be here to get reception. Technically it's our own radio station, but it's not widespread."
+    },
+    "3": {
+        "q": "How does all of this work?",
+        "a": "Our light display is a combination of electronic components and software working together to run the show. We use \"pixel lights\" in our display. Each light's color and intensity are controlled individually, so the effect possibilites are endless. Check out our <a href=\"/how-it-works\"><b>how it works</b></a> page for more information!"
+    },
+    "4": {
+        "q": "What sequencing software do you use?",
+        "a": "I use the open source cross-platform light sequencing program <b>XLights</b>."
+    }
+}

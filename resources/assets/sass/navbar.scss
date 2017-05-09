@@ -1,0 +1,80 @@
+// Navbar Styles
+
+.navbar {
+  padding: 10px 0;
+  border-bottom: 1px solid $navbar-border-color;
+}
+
+.navbar-nav li {
+  margin-top: 10px;
+  text-align: center!important;
+}
+.navbar .navbar-nav > li > a,
+.navbar .navbar-nav > li.active > a {
+  color: $link-color;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.navbar .navbar-nav > li.active > a,
+.navbar .navbar-nav > li.active:hover > a,
+.navbar .navbar-nav > li.active > a:focus,
+.navbar .navbar-nav > li > a:hover {
+  background: none;
+  color: $link-hover-color;
+}
+.navbar .navbar-nav > li.active > a {
+  font-weight: bold;
+}
+.navbar .navbar-toggle, .navbar .navbar-toggle:focus {
+  margin: 0;
+  color: $brand-primary;
+  padding: 20px 15px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.navbar .navbar-toggle:hover {
+  background: $brand-primary;
+}
+.navbar .navbar-toggle:hover .icon-bar {
+  background: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $brand-primary;
+  height: 3px;
+}
+.navbar-collapse {
+  border: none!important;
+}
+
+.navbar-brand {
+  height: inherit;
+  padding: 0;
+  padding-left: 10px;
+}
+.navbar-brand:hover {
+  opacity: 0.9;
+}
+
+.container > .navbar-header, 
+.container > .navbar-collapse {
+    margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-brand img {
+    width: 300px;
+  }
+  .navbar .navbar-nav > li > a {
+    padding: 7px 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar-brand img {
+    width: 215px;
+    padding: 11px 0;
+  }
+}

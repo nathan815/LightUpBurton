@@ -1,0 +1,43 @@
+{
+  "rules": {
+    "showData": {
+      ".read": true,
+      ".write": false
+    },
+    "songYoutubeIDs": {
+      ".read": true,
+      ".write": false
+    },
+    "blog": {
+      ".read": false,
+      ".write": false,
+      "posts": {
+        ".indexOn": "slug"
+      }
+    },
+    "contact": {
+      "$key": {
+        ".read": false,
+        ".write": "!data.exists()",
+        ".validate": "newData.hasChildren(['name','email','message','timestamp'])",
+        
+        "name": {
+          ".validate": "newData.isString()"
+        },
+        "email": {
+          ".validate": "newData.isString() && newData.val().contains('@')"
+        },
+        "message": {
+          ".validate": "newData.isString() && newData.val().length <= 500"
+        },
+        "timestamp": {
+          ".validate": "newData.isNumber() && newData.val() >= now"
+        },
+        "$other": {
+          ".validate": false
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+#faq .panel {
+    border: 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: none;
+}
+#faq .panel:last-of-type {
+    border-bottom: none;
+}
+#faq .panel .panel-heading {
+    padding: 10px 0;
+}
+#faq .panel .panel-body {
+    border-color: #eee;
+}
+#faq .panel .panel-heading .panel-title a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
+    display: block;
+}

@@ -1,0 +1,55 @@
+// Info Bar Styles
+
+#infobar {
+    position: absolute;
+    top: 87px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 5px 0;
+    border-bottom: 1px solid $navbar-border-color;
+    z-index: 5;
+    min-height: 35px;
+}
+#infobar .tune-to {
+}
+#infobar .times {
+    text-align: right;
+}
+#infobar .countdown {
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    color: $brand-success;
+    font-size: 15px;
+}
+#infobar .now-playing {
+    @extend .countdown;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#infobar .now-playing a {
+    color: inherit!important;
+}
+#infobar .now-playing .song {
+    font-style: italic;
+}
+
+@media screen and (max-width: 991px) { 
+    #infobar {
+        top: 76px;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    #infobar div {
+        text-align: center!important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #infobar {
+        top: 62px;
+    }
+}

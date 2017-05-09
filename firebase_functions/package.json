@@ -1,0 +1,9 @@
+{
+  "name": "contact-form-email",
+  "description": "Send email to admin when contact form is submitted",
+  "dependencies": {
+    "nodemailer": "^2.4.1",
+    "firebase-admin": "^4.1.1",
+    "firebase-functions": "^0.5.1"
+  }
+}

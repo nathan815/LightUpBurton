@@ -1,0 +1,247 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Dancing+Script);
+//@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Kaushan+Script|Pacifico');
+
+// Variables
+@import "variables";
+
+$body-bg: #f7f7f7;
+
+$brand-primary: #BE3A2C;
+//$brand-success: #14ab44;
+
+$link-color: #BE3A2C;
+$link-hover-color: darken($link-color, 15%);
+
+$general-box-radius: 6px;
+$navbar-border-color: #d3e0e9;
+
+$body-top-padding: 140px;
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Other imports
+@import "share_buttons";
+@import "navbar";
+@import "infobar";
+@import "faq";
+@import "blog";
+
+body {
+  padding: $body-top-padding 0 50px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+#content > .breadcrumb {
+  @extend .content-box;
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+}
+
+.lights {
+  background: url(/img/lights.png);
+  height: 53px;
+}
+
+.form-control {
+  padding-left: 10px!important;
+}
+.form-control:focus {
+  border-color: #bbb;
+  box-shadow: none;
+}
+.btn:focus {
+  outline: none!important;
+}
+
+.popover.now-playing-popover {
+  box-shadow: none;
+
+}
+.now-playing-popover .popover-content {
+  padding: 6px;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), 
+  0 -50px url('/img/blurred-lights.jpeg');
+  color: white;
+  text-shadow: 0 0 5px #333;
+  border-radius: $general-box-radius;
+  margin-bottom: 20px;
+}
+.jumbotron h1 {
+  font-family: 'Dancing Script', 'Raleway', sans-serif;
+  font-size: 65px;
+}
+.jumbotron p {
+  font-size: 22px;
+}
+
+.content-box {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: $general-box-radius;
+  border: 1px solid #e5e5e5;
+  margin: 0 0 15px 0;
+  box-shadow: 0 0 4px #eee;
+}
+.content-box.with-header {
+  padding: 0;
+}
+
+.content-box-header {
+  @extend .jumbotron;
+  border-bottom-left-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+  padding: 15px 20px!important;
+  text-align: left!important;
+  margin-bottom: 0!important;
+  background-position: -20px -80px;
+}
+.content-box-header h2,
+.content-box-header h3 {
+  margin: 0;
+}
+.content-box-header a {
+  color: #fff;
+}
+
+.content-box .content-box-content {
+  padding: 15px 20px;
+}
+.content-box .content-box-content *:last-child {
+  margin-bottom: 0;
+}
+.content-box .content-box-content h4 {
+
+}
+
+.content-box .content-box-content.google-map-location {
+  padding: 3px;
+  margin-bottom: -5px;
+}
+.content-box.home {
+  margin-top: 0;
+}
+.content-box.with-jumbotron .content-box-content {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.content-box.with-jumbotron .jumbotron {
+  border-bottom-left-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+}
+
+.main-content-left {
+  padding-right: 0 !important;
+}
+.sidebar-right {
+  padding-left: 15px !important;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+#credits {
+  text-align: center;
+}
+#credits img {
+  width: 47%;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: $brand-primary;
+}
+
+::selection {
+    color: #fff;
+    background: $brand-primary;
+}
+
+.footer {
+  @extend .content-box;
+  padding: 15px;
+  color: #777; //darken($brand-primary, 5%);
+  text-align: center;
+  margin-top: 25px;
+}
+.footer p {
+  margin: 0;
+}
+
+.row.marketing {
+}
+.row.marketing h4 {
+  text-transform: uppercase;
+  color: $brand-success;
+  font-weight: bold;
+}
+.row.marketing a {
+  font-weight: bold; 
+}
+.row.marketing p {
+  margin-bottom: 25px!important;
+}
+
+
+@media screen and (min-width: 968px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    padding-top: $body-top-padding*0.95;
+  }
+  .main-content-left {
+    padding-right: 15px!important;
+  }
+  #credits img {
+    width: 30%;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 165px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 150px;
+  }
+  #credits img {
+    width: 47%;
+  }
+}
