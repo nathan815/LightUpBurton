@@ -40,12 +40,12 @@ $(document).ready(function() {
 
     database.ref('showData').on('value', function(snapshot) {
         var data = snapshot.val();
-        var song = data['nowPlaying'];
+        var song = data.nowPlaying;
 
-        SHOW_START_HOUR = data['showStartHour'];
-        SHOW_END_HOUR = data['showEndHour'];
-        FIRST_SHOW_DATE = Date.parse(data['firstShowDate']);
-        LAST_SHOW_DATE = Date.parse(data['lastShowDate']);
+        SHOW_START_HOUR = data.showStartHour;
+        SHOW_END_HOUR = data.showEndHour;
+        FIRST_SHOW_DATE = Date.parse(data.firstShowDate);
+        LAST_SHOW_DATE = Date.parse(data.lastShowDate);
 
         var now = new Date();
 
