@@ -15,7 +15,7 @@ class GalleryController extends Controller
         if(!is_null($year) && !in_array($year, $allYears))
             abort(404);
 
-        $images = $this->filter($gallery->getValue(), $year);
+        $images = $this->filter($gallery->getChild('images')->getValue(), $year);
 
         $videos = $this->filter($gallery->getChild('videos')->getValue(), $year);
 

@@ -1,43 +1,103 @@
-.gallery-item img {
-
-    position: absolute;
-    max-width: 100%;
-    width: 100%;
-    max-height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+.gallery.content-box .content-box-content {
+    padding-bottom: 0;
 }
 .gallery-item {
     position: relative;
     display: inline-block;
     padding: 0;
     margin: 0;
+    background: #000;
+    border-radius: 4px;
 
-    overflow:hidden;
-    padding-bottom:100%;
-    width: 100%;
-    height: 100%;
+    img {
+        border-radius: 4px;
+        background: #000;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .gallery-item-caption {
+        background: rgba(0,0,0,0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        padding: 7px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        z-index: 2;
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
 }
-.gallery-item .gallery-item-caption {
-    background: rgba(0,0,0,0.8);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    padding: 7px;
-    display: none;
-    z-index: 2;
+
+.gallery-item:hover {
+    img {
+        opacity: 0.6;
+    }
+    .gallery-item-caption {
+        display: block;
+    }
 }
-.gallery-item:hover .gallery-item-caption {
-    display: block;
+
+.gallery.images {
+    .gallery-item {
+        overflow:hidden;
+        padding-bottom:100%;
+        width: 100%;
+        height: 100%;
+    }
+    .gallery-item img {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
 }
-.gallery-item a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+
+
+// Magnific Popup Animation CSS
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }

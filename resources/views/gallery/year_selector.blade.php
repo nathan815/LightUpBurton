@@ -5,6 +5,7 @@
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
     <li class="dropdown-header">Filter by Year</li>
+    
     @if(!is_null($year))
     <li><a href="/gallery">All Years</a></li>
     @endif
