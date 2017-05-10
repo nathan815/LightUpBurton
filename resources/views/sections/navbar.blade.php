@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li{!! classActivePath('/') !!}><a href="/">Home</a></li>
         <li{!! classActivePath('info') !!}><a href="/info">Info</a></li>
-        <li{!! classActivePath('gallery') !!}><a href="/gallery">Gallery</a></li>
+        <li{!! classActiveSegment(1, 'gallery') !!}><a href="/gallery">Gallery</a></li>
         <li{!! classActiveSegment(1, 'blog') !!}><a href="/blog">Blog</a></li>
         <li{!! classActivePath('contact') !!}><a href="/contact">Contact</a></li>
       </ul>
