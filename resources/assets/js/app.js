@@ -1,5 +1,4 @@
-// Genral constants
-// These are populated by firebase
+// Genral constants - these are populated by firebase
 var FIRST_SHOW_DATE;
 var SHOW_START_HOUR;
 var SHOW_END_HOUR;
@@ -9,11 +8,10 @@ var countdownInterval;
 var inShowSeason = false;
 
 // Import some non-module scripts
-require('script-loader!./countdown.min.js');
-require('script-loader!./ie10-viewport-bug-workaround.js');
+require('script-loader!./plugins/countdown.min.js');
+require('script-loader!./plugins/ie10-viewport-bug-workaround.js');
 
-// jQuery and Bootstrap
-window.$ = window.jQuery = require('jquery');
+// Bootstrap
 require('bootstrap-sass');
 
 // Firebase

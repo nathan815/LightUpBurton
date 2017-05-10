@@ -15,7 +15,7 @@ Route::get('/', function() {
     return view('index');
 });
 
-Route::get('/gallery', 'GalleryController@index');
+Route::get('/gallery/{year?}', 'GalleryController@index');
 Route::get('/info', 'InfoController@index');
 Route::get('/contact', 'ContactController@index');
 

@@ -66,6 +66,11 @@ p {
   padding: 6px;
 }
 
+.dropdown .dropdown-menu li a:hover {
+  background: $brand-primary;
+  color: #fff;
+}
+
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
@@ -95,6 +100,10 @@ p {
 .content-box.with-header {
   padding: 0;
 }
+.content-box.less-padding {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 .content-box-header {
   @extend .jumbotron;
@@ -109,8 +118,16 @@ p {
 .content-box-header h3 {
   margin: 0;
 }
-.content-box-header a {
+.content-box-header a, 
+.content-box-header .btn-link {
   color: #fff;
+  padding: 0;
+}
+.content-box-header .dropdown,
+.content-box-header .dropdown-menu a {
+  box-shadow: none;
+  text-shadow: none;
+  color: #000;
 }
 
 .content-box .content-box-content {

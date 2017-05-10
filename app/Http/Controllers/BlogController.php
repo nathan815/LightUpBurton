@@ -12,7 +12,6 @@ class BlogController extends Controller
 
   private $firebase;
   private $db;
-  private $postsRef;
 
   public function __construct(Firebase $firebase) {
     $this->firebase = $firebase;

@@ -15,6 +15,9 @@
         ".indexOn": "slug"
       }
     },
+    "gallery": {
+      ".indexOn": "type"
+    },
     "contact": {
       "$key": {
         ".read": false,
