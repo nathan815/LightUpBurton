@@ -15,9 +15,9 @@ class GalleryController extends Controller
         if(!is_null($year) && !in_array($year, $allYears))
             abort(404);
 
-        $images = $this->filter($gallery->orderByChild('type')->equalTo('image')->getValue(), $year);
+        $images = $this->filter($gallery->getValue(), $year);
 
-        $videos = $this->filter($gallery->orderByChild('type')->equalTo('video')->getValue(), $year);
+        $videos = $this->filter($gallery->getChild('videos')->getValue(), $year);
 
         return view('gallery.gallery')->with([
             'images' => $images,
@@ -28,7 +28,7 @@ class GalleryController extends Controller
     }
 
     private function filter($arr, $year) {
-        if(is_null($year))
+        if(is_null($year) || is_null($arr))
             return $arr;
         $newArr = [];
         foreach($arr as $val) {
