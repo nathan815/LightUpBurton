@@ -19,7 +19,7 @@ class GalleryController extends Controller
 
         $videos = $this->filter($gallery->orderByChild('type')->equalTo('video')->getValue(), $year);
 
-        return view('gallery.index')->with([
+        return view('gallery.gallery')->with([
             'images' => $images,
             'videos' => $videos,
             'year' => $year,
