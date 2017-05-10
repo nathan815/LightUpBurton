@@ -23,10 +23,14 @@
         left: 0;
         width: 100%;
         color: #fff;
-        padding: 7px;
+        padding: 3px 7px;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         z-index: 2;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     a {
@@ -62,6 +66,12 @@
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-item-caption {
+        font-size: 12px;
     }
 }
 

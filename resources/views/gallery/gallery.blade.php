@@ -19,7 +19,7 @@
             </h4>
             @else
                 @foreach($videos as $video)
-                    <div class="col-xs-6 col-md-4">
+                    <div class="col-xs-6 col-md-4 col-lg-4">
                         <div class="gallery-item">
                             <span class="gallery-item-caption">{{ $video['name'] }}</span>
                             <a href="https://www.youtube.com/watch?v={{ $video['youtubeId'] }}" title="{{ $video['name'] }}"></a>
