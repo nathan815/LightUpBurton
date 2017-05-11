@@ -172,7 +172,7 @@ function updateNowPlaying(song) {
 // Generate a youtube play button and place it 
 // into the now playing popover
 function generateYoutubeBtnPopover(song) {
-  database.ref('songYoutubeIDs/'+song).once('value').then(function(snapshot) {
+  database.ref('songYoutubeIDs').child(song).once('value').then(function(snapshot) {
     var ytID = snapshot.val();
     var popoverContent = '';
     if(ytID) {

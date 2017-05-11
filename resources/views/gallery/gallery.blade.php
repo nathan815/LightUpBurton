@@ -13,9 +13,9 @@
             @if(empty($videos))
             <h4 class="text-center" style="margin-bottom:6px;">
                 <span class="glyphicon glyphicon-facetime-video" style="font-size:70px;"></span>
-                <br />
-                <br />
-                We don't have any videos to display right now. Check back later!
+                <br /><br />
+                There aren't any videos to display at this time. Check back later!
+                <br /><br />
             </h4>
             @else
                 @foreach($videos as $video)
@@ -44,9 +44,9 @@
             @if(empty($images))
             <h4 class="text-center" style="margin-bottom:6px;">
                 <span class="glyphicon glyphicon-camera" style="font-size:70px;"></span>
-                <br />
-                <br />
-                We don't have any pictures to display right now. Check back later!
+                <br /><br />
+                There aren't any pictures to display at this time. Check back later!
+                <br /><br />
             </h4>
             @else
                 @foreach($images as $image)
