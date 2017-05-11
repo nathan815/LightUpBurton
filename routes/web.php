@@ -11,13 +11,12 @@
 |
 */
 
-Route::get('/', function() {
-    return view('index');
-});
-
-Route::get('/gallery/{year?}', 'GalleryController@index');
+Route::get('/', 'HomeController@index');
 Route::get('/info', 'InfoController@index');
 Route::get('/contact', 'ContactController@index');
+
+Route::get('/gallery/{year?}', 'GalleryController@index');
+Route::get('/gallery/load/{last_id}', 'GalleryController@loadMore');
 
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/create', 'BlogController@newPost');
