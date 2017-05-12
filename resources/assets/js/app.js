@@ -45,6 +45,11 @@ $(document).ready(function() {
         FIRST_SHOW_DATE = Date.parse(data.firstShowDate);
         LAST_SHOW_DATE = Date.parse(data.lastShowDate);
 
+        if(data.showCancelled) {
+          showIsCancelled();
+          return;
+        }
+
         var now = new Date();
 
         // determine if we are in season
@@ -90,6 +95,12 @@ function showStartingNow() {
   stopCountdown();
   $('.countdown').show(250);
   $('.countdown .time').text('Starting Now!');
+}
+
+function showIsCancelled() {
+  $('.countdown').show(250)
+    .addClass('cancelled')
+    .html('<em>Tonight\'s Show Cancelled</em>');
 }
 
 function hasShowStarted() {

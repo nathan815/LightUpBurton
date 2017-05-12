@@ -23,6 +23,9 @@
     color: $brand-success;
     font-size: 15px;
 }
+#infobar .countdown.cancelled {
+    color: $brand-warning;
+}
 #infobar .now-playing {
     @extend .countdown;
     overflow: hidden;
