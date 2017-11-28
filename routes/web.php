@@ -16,7 +16,7 @@ Route::get('/info', 'InfoController@index');
 Route::get('/contact', 'ContactController@index');
 
 Route::get('/gallery/{year?}', 'GalleryController@index');
-Route::get('/gallery/load/{last_id}', 'GalleryController@loadMore');
+Route::get('/gallery/load/{type}/{year}/{last_id}', 'GalleryController@loadMore');
 
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/create', 'BlogController@newPost');

@@ -13,10 +13,11 @@ $brand-primary: #BE3A2C;
 $link-color: #BE3A2C;
 $link-hover-color: darken($link-color, 15%);
 
-$general-box-radius: 6px;
-$navbar-border-color: #d3e0e9;
+$general-box-radius: 9px;
+$navbar-border-color: #e5e5e5;
 
 $body-top-padding: 140px;
+$body-bottom-padding: 10px;
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -28,9 +29,11 @@ $body-top-padding: 140px;
 @import "faq";
 @import "blog";
 @import "gallery";
+@import "home";
 
 body {
-  padding: $body-top-padding 0 50px;
+  padding: $body-top-padding 0 $body-bottom-padding;
+  background: linear-gradient( rgba(100, 100, 100, 0.2), rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.2) ), url(/img/background.jpg) fixed;
 }
 
 p {
@@ -98,9 +101,9 @@ p {
   background: #fff;
   padding: 25px 20px;
   border-radius: $general-box-radius;
-  border: 1px solid #e5e5e5;
+  border: 0;
   margin: 0 0 15px 0;
-  box-shadow: 0 0 4px #eee;
+  box-shadow: 0 0 10px #222;
 }
 .content-box.with-header {
   padding: 0;
@@ -149,9 +152,7 @@ p {
   padding: 3px;
   margin-bottom: -5px;
 }
-.content-box.home {
-  margin-top: 0;
-}
+
 .content-box.with-jumbotron .content-box-content {
   padding-top: 5px;
   padding-bottom: 10px;
@@ -180,6 +181,9 @@ p {
   vertical-align: middle;
   margin-right: 5px;
   margin-bottom: 15px;
+}
+#credits a {
+  text-decoration: none
 }
 
 ::-moz-selection { /* Code for Firefox */

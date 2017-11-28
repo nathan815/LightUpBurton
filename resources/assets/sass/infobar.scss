@@ -10,6 +10,8 @@
     border-bottom: 1px solid $navbar-border-color;
     z-index: 5;
     min-height: 35px;
+    opacity: 0.95;
+    color: $brand-success;
 }
 #infobar .tune-to {
 }

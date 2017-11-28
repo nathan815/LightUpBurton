@@ -3,65 +3,47 @@
 @section('title','Gallery')
 @section('content')
 
-<div class="gallery videos content-box with-header">
+<div class="gallery videos content-box with-header" data-type="videos" data-year="{{ $year }}">
     <div class="content-box-header">
         <h3 class="pull-left">Videos</h3>
         @include('gallery.year_selector')
     </div>
     <div class="content-box-content">
-        <div class="row">
-            @if(empty($videos))
-            <h4 class="text-center" style="margin-bottom:6px;">
-                <span class="glyphicon glyphicon-facetime-video" style="font-size:70px;"></span>
-                <br /><br />
-                There aren't any videos to display at this time. Check back later!
-                <br /><br />
-            </h4>
-            @else
-                @foreach($videos as $video)
-                    <div class="col-xs-6 col-md-4 col-lg-4">
-                        <div class="gallery-item">
-                            <span class="gallery-item-caption">{{ $video['name'] }}</span>
-                            <a href="https://www.youtube.com/watch?v={{ $video['youtubeId'] }}" title="{{ $video['name'] }}"></a>
-                            <img src="https://img.youtube.com/vi/{{ $video['youtubeId'] }}/0.jpg" class="img-responsive full-width" />
-                        </div>
-                        <br>
-                        <br>
-                    </div>
-                @endforeach
-            @endif
-        </div><!--/.row-->
+        @if(empty($videos))
+        <h4 class="text-center" style="margin-bottom:6px;">
+            <span class="glyphicon glyphicon-facetime-video" style="font-size:70px;"></span>
+            <br /><br />
+            There aren't any videos to display at this time. Check back later!
+            <br /><br />
+        </h4>
+        @else
+            <div class="row items">
+                @include('gallery.videos')
+            </div>
+            @include('gallery.load_more_btn')
+        @endif
     </div>
 </div>
 
-<div class="gallery images content-box with-header">
+<div class="gallery images content-box with-header" data-type="images" data-year="{{ $year }}">
     <div class="content-box-header">
         <h3 class="pull-left">Pictures</h3>
         @include('gallery.year_selector')
     </div>
     <div class="content-box-content">
-        <div class="row">
-            @if(empty($images))
-            <h4 class="text-center" style="margin-bottom:6px;">
-                <span class="glyphicon glyphicon-camera" style="font-size:70px;"></span>
-                <br /><br />
-                There aren't any pictures to display at this time. Check back later!
-                <br /><br />
-            </h4>
-            @else
-                @foreach($images as $image)
-                <div class="col-xs-6 col-md-4">
-                    <div class="gallery-item">
-                        <span class="gallery-item-caption">{{ $image['name'] }}</span>
-                        <a href="{{ $image['url'] }}" title="{{ $image['name'] }}"></a>
-                        <img src="{{ $image['url'] }}" class="img-responsive full-width" />
-                    </div>
-                    <br>
-                    <br>
-                </div>
-                @endforeach
-            @endif
-        </div><!--/.row-->
+        @if(empty($images))
+        <h4 class="text-center" style="margin-bottom:6px;">
+            <span class="glyphicon glyphicon-camera" style="font-size:70px;"></span>
+            <br /><br />
+            There aren't any pictures to display at this time. Check back later!
+            <br /><br />
+        </h4>
+        @else
+            <div class="row items">
+                @include('gallery.images')
+            </div>
+            @include('gallery.load_more_btn')
+        @endif
     </div><!--/.content-box-content-->
 </div>
 

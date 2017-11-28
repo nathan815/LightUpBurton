@@ -1,11 +1,11 @@
 {
     "0": { 
         "q": "How did you get started doing this?",
-        "a": "Shortly after Christmas 2016, I began watching other people's Christmas light displays on YouTube. I was intrigued by the precision of many of them &mdash; namely, Matt Johnson's and Tom BetGeorge's &mdash; and the technology behind them. I decided that I wanted to try something like this, so I started researching. I joined the Do It Yourself Christmas forums and found out as much as I could. Eventually, I found myself planning our first show, purchasing parts, sequencing... This is quite a fun hobby to get in to! <br>&mdash;Nathan"
+        "a": "Shortly after Christmas 2016, I began watching other people's Christmas light displays on YouTube. I was intrigued by the precision of many of them &mdash; namely, Matt Johnson's and Tom BetGeorge's &mdash; and the technology behind them. I decided that I wanted to try something like this, so I started researching. I joined the Do It Yourself Christmas forums and found out as much as I could. Eventually, I found myself planning our first show, purchasing parts, sequencing... This is quite a fun hobby to get in to!"
     },
     "1": {
         "q": "Exactly how many lights are in the display?",
-        "a": "There are 850 pixel lights, and 400 traditional LED/incandescent lights. More are planned for next year!"
+        "a": "There are 1,010 pixel lights, and 400 traditional LED/incandescent lights. More are planned for next year!"
     },
     "2": {
         "q": "You have your own radio station... what!?",
@@ -17,6 +17,6 @@
     },
     "4": {
         "q": "What sequencing software do you use?",
-        "a": "I use the open source cross-platform light sequencing program <b>XLights</b>."
+        "a": "I use the open source light sequencing program <a href='http://xlights.org/' class='bold'>xLights</a>. Shout out to the awesome developers!"
     }
 }

@@ -11,6 +11,7 @@ Homestead.yaml
 npm-debug.log
 .env
 /keys/*
+/bower_components
 
 # don't commit compiled assets
 /public/css/*

@@ -36,6 +36,18 @@ $(document).ready(function() {
       'template': getPopoverWithCustomClass('now-playing-popover')
     });
 
+    $(document).scroll(function() {
+      var $this = $(this);
+      var $bar = $('#infobar');
+      var origOpacity =  $bar.data('origOpacity') || $bar.css('opacity');
+      $bar.data('origOpacity', origOpacity)
+      var scroll = $this.scrollTop();
+      var opacity = 1 -  scroll*0.05;
+      if(opacity > origOpacity) 
+        opacity = origOpacity;
+      $bar.css('opacity', opacity);
+    });
+
     database.ref('showData').on('value', function(snapshot) {
         var data = snapshot.val();
         var song = data.nowPlaying;
@@ -86,6 +98,38 @@ $(document).ready(function() {
                 alert('Thanks, we have received your message!');
             },300);
         });
+
+    });
+
+    $('.gallery-load-more').click(function() {
+      var $btn = $(this);
+      var $parent = $(this).closest('.gallery');
+      var type = $parent.attr('data-type');
+      var $lastChild = $('.gallery-item-container:last-of-type', $parent);
+      var lastId = $lastChild.attr('data-id');
+      var year = $parent.attr('data-year');
+      year = year ? year : 'all';
+
+      if(!lastId) 
+        return;
+
+      $btn.prop('disabled',true).data('origtext', $btn.text()).text('Loading...');
+      
+      $.ajax({
+        method: 'GET',
+        url: '/gallery/load/' + type + '/' + year + '/' + lastId,
+        success: function(data) {
+          if(!data) {
+            $btn.text('You have reached the end.')
+            return;
+          }
+          $('.gallery[data-type="'+type+'"] .items').append(data);
+          $btn.prop('disabled',false).text($btn.data('origtext'));
+        },
+        error: function() {
+          alert('Sorry, could not load more '+type);
+        }
+      });
 
     });
 
@@ -157,9 +201,9 @@ function createCountdown(date) {
       var weeks = ts.weeks ? ts.weeks + 'w' : '';
       var days = ts.days? ts.days + 'd' : '';
       var hours = ts.hours ? ts.hours + 'h' : '';
-      var minutes = ts.minutes ? ts.minutes + 'm' 
-      : (ts.hours != 0 ? '0m' : '');
-      var seconds = ts.seconds ? ts.seconds + 's' : '0s';
+      var minutes = ts.minutes ? ts.minutes + 'm' : '';
+      //: (ts.hours != 0 ? '0m' : '');
+      var seconds = ts.seconds ? ts.seconds + 's' : '';
       var text = [weeks, days, hours, minutes, seconds];
       text = text.join(' ');
       $('.countdown .time').html(text).attr('title',ts.toString());

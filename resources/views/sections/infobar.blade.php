@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="times col-lg-4 col-md-4 col-sm-4">
-        Nov 25-Dec 30, 6pm-10pm 
+        Nov 25-Dec 30, 6-10pm
       </div>
     </div>
   </div>
