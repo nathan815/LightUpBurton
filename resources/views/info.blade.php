@@ -10,10 +10,23 @@
         
         <div class="content-box with-header">
             <div class="content-box-header">
-                <h3>Schedule</h3>
+                <h3>Hours</h3>
             </div>
             <div class="content-box-content">
-                <p>Beginning November 25th and ending December 30th, the show runs everyday 6pm to 10pm. You can stop by any time during these hours.</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Nov. 27th - Jan. 1st</th>
+                        <th>Hours</th>
+                    </tr>
+                    <tr>
+                        <td>Sunday-Thursday</td>
+                        <td>5:00 - 9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday-Saturday</td>
+                        <td>5:00 - 10:00 PM</td>
+                    </tr>
+                </table>
             </div>
         </div>
 
@@ -22,12 +35,7 @@
                 <h3>Listening</h3>
             </div>
             <div class="content-box-content">
-                <p>To listen to the music of our light show, all you have to do is tune your radio to 92.1 FM. It's that easy!</p>
-                <p><small>
-                Wondering how it works? See the Q&amp;A 
-                <span class="hidden-xs hidden-sm">to the right.</span>
-                <span class="hidden-md hidden-lg">below.</span>
-                </small></p>
+                <p>To listen to the music of our light show, all you have to do is tune your radio to 87.9 FM. It's that easy!</p>
             </div>
         </div>
 

@@ -1,7 +1,8 @@
 // Genral constants - these are populated by firebase
 var FIRST_SHOW_DATE;
 var SHOW_START_HOUR;
-var SHOW_END_HOUR;
+var SHOW_END_HOUR_WEEKDAY;
+var SHOW_END_HOUR_WEEKEND;
 
 // Some variables
 var countdownInterval;
@@ -53,7 +54,8 @@ $(document).ready(function() {
         var song = data.nowPlaying;
 
         SHOW_START_HOUR = data.showStartHour;
-        SHOW_END_HOUR = data.showEndHour;
+        SHOW_END_HOUR_WEEKDAY = data.showEndHourWeekday;
+        SHOW_END_HOUR_WEEKEND = data.showEndHourWeekend;
         FIRST_SHOW_DATE = Date.parse(data.firstShowDate);
         LAST_SHOW_DATE = Date.parse(data.lastShowDate);
 
@@ -151,7 +153,7 @@ function hasShowStarted() {
   if(!inShowSeason) 
     return false;
   var curHour = new Date().getHours();
-  return (curHour >= SHOW_START_HOUR && curHour < SHOW_END_HOUR);
+  return (curHour >= SHOW_START_HOUR && (curHour < SHOW_END_HOUR_WEEKDAY || curHour < SHOW_END_HOUR_WEEKEND));
 }
 
 function setupCountdownDisplay(now) {
