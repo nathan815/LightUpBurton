@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="tune-to col-lg-4 col-md-4 col-sm-4">
-        Tune to 92.1 FM!
+        Tune to 87.9 FM!
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4">
         
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="times col-lg-4 col-md-4 col-sm-4">
-        Nov 25-Dec 30, 6-10pm
+        Nov 27th - Jan 1st (<a href="/info">View Hours</a>)
       </div>
     </div>
   </div>

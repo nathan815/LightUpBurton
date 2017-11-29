@@ -199,12 +199,25 @@ p {
 .footer {
   @extend .content-box;
   padding: 15px;
-  color: #777; //darken($brand-primary, 5%);
+  color: $brand-success;
   text-align: center;
   margin-top: 25px;
 }
-.footer p {
-  margin: 0;
+.footer {
+  p {
+    margin: 0;
+  }
+  .social {
+  }
+  .social a:hover {
+      text-decoration: none;
+      img {
+          opacity: 0.7;
+      }
+  }
+  .social img {
+      width: 150px;
+  }
 }
 
 .row.marketing {

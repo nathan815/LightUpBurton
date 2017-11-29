@@ -34,7 +34,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-#infobar .now-playing a {
+#infobar a {
+    font-weight: bold;
     color: inherit!important;
 }
 #infobar .now-playing .song {

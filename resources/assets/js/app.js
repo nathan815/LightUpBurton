@@ -138,7 +138,7 @@ $(document).ready(function() {
 function showStartingNow() {
   stopCountdown();
   $('.countdown').show(250);
-  $('.countdown .time').text('Starting Now!');
+  $('.countdown .time').text('Playing Now!');
 }
 
 function showIsCancelled() {
