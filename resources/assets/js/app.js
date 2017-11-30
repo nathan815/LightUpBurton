@@ -145,6 +145,7 @@ function showStartingNow() {
   stopCountdown();
   $('.countdown').show(250);
   $('.countdown .time').text('Playing Now!');
+  $('.home-countdown').addClass('playing');
 }
 
 function showIsCancelled() {
@@ -170,6 +171,7 @@ function hasShowStarted() {
 
 function setupCountdownDisplay(now) {
   $('.now-playing').hide();
+  $('.home-countdown').removeClass('playing');
   // if show season has began
   if(inShowSeason) {
     $('.countdown .word').text('Next');
@@ -222,6 +224,11 @@ function createCountdown(date) {
       var seconds = ts.seconds ? ts.seconds + 's' : '';
       var text = [weeks, days, hours, minutes, seconds];
       text = text.join(' ');
+      $('.home-countdown #weeks').text(ts.weeks);
+      $('.home-countdown #days').text(ts.days);
+      $('.home-countdown #hours').text(ts.hours);
+      $('.home-countdown #minutes').text(ts.minutes);
+      $('.home-countdown #seconds').text(ts.seconds);
       $('.countdown .time').html(text).attr('title',ts.toString());
     },
     countdown.WEEKS|countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS
