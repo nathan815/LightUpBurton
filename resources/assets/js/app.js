@@ -4,6 +4,10 @@ var SHOW_START_HOUR;
 var SHOW_END_HOUR_WEEKDAY;
 var SHOW_END_HOUR_WEEKEND;
 
+// JS Day of Week
+// Sunday = 0, Saturday = 7
+var DAY_FRIDAY = 6;
+
 // Some variables
 var countdownInterval;
 var inShowSeason = false;
@@ -152,8 +156,16 @@ function showIsCancelled() {
 function hasShowStarted() {
   if(!inShowSeason) 
     return false;
-  var curHour = new Date().getHours();
-  return (curHour >= SHOW_START_HOUR && (curHour < SHOW_END_HOUR_WEEKDAY || curHour < SHOW_END_HOUR_WEEKEND));
+  var d = new Date();
+  var curHour = d.getHours();
+  var curDay = d.getDay();
+  return (
+    curHour >= SHOW_START_HOUR && 
+    (
+      (curDay < DAY_FRIDAY && curHour < SHOW_END_HOUR_WEEKDAY) || 
+      (curDay >= DAY_FRIDAY && curHour < SHOW_END_HOUR_WEEKEND)
+    )
+  );
 }
 
 function setupCountdownDisplay(now) {
@@ -170,8 +182,8 @@ function setupCountdownDisplay(now) {
     // Once show has ended, start countdown to 6pm the next day
     // countdown.js will automatically adjust for when a day goes to
     // the next month (i.e. October 32 => November 1)
-    else if(now.getHours() > SHOW_END_HOUR_WEEKEND || 
-      now.getHours() > SHOW_END_HOUR_WEEKDAY) 
+    else if((now.getDay() >= DAY_FRIDAY && now.getHours() > SHOW_END_HOUR_WEEKEND) || 
+      (now.getDay() < DAY_FRIDAY && now.getHours() > SHOW_END_HOUR_WEEKDAY))
     {
       var day = now.getDate()+1;
     }
