@@ -32,5 +32,15 @@
   @yield('inline_scripts')
   <script src="/js/app.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46634635-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-46634635-5');
+  </script>
+
 </body>
 </html>
