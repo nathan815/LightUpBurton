@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="times col-lg-4 col-md-4 col-sm-4">
-        Nov 27th - Jan 1st (<a href="/info">View Hours</a>)
+        Nov 27th - Jan 1st <a href="/info">(view hours)</a>
       </div>
     </div>
   </div>

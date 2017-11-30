@@ -13,20 +13,22 @@
                 <h3>Hours</h3>
             </div>
             <div class="content-box-content">
-                <table class="table table-bordered">
-                    <tr>
-                        <th>Nov. 27th - Jan. 1st</th>
-                        <th>Hours</th>
-                    </tr>
-                    <tr>
-                        <td>Sunday-Thursday</td>
-                        <td>5:00 - 9:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Friday-Saturday</td>
-                        <td>5:00 - 10:00 PM</td>
-                    </tr>
-                </table>
+                <div class="panel panel-default" style="margin: 8px 0px;">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Nov. 27th - Jan. 1st</th>
+                            <th>Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Sunday-Thursday</td>
+                            <td>5:00 - 9:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday-Saturday</td>
+                            <td>5:00 - 10:00 PM</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -35,7 +37,7 @@
                 <h3>Listening</h3>
             </div>
             <div class="content-box-content">
-                <p>To listen to the music of our light show, all you have to do is tune your radio to 87.9 FM. It's that easy!</p>
+                <p>To enjoy the music of our light show from the warmth of your car, just tune your radio to 87.9 FM!</p>
             </div>
         </div>
 

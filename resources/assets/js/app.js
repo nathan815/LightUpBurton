@@ -170,7 +170,9 @@ function setupCountdownDisplay(now) {
     // Once show has ended, start countdown to 6pm the next day
     // countdown.js will automatically adjust for when a day goes to
     // the next month (i.e. October 32 => November 1)
-    else if(now.getHours() > SHOW_START_HOUR || now.getHours() > SHOW_END_HOUR) {
+    else if(now.getHours() > SHOW_END_HOUR_WEEKEND || 
+      now.getHours() > SHOW_END_HOUR_WEEKDAY) 
+    {
       var day = now.getDate()+1;
     }
     // countdown to 6pm today

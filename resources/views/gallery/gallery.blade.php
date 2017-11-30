@@ -13,7 +13,7 @@
         <h4 class="text-center" style="margin-bottom:6px;">
             <span class="glyphicon glyphicon-facetime-video" style="font-size:70px;"></span>
             <br /><br />
-            There aren't any videos to display at this time. Check back later!
+            No videos yet. We'll have some here soon.
             <br /><br />
         </h4>
         @else
@@ -35,7 +35,7 @@
         <h4 class="text-center" style="margin-bottom:6px;">
             <span class="glyphicon glyphicon-camera" style="font-size:70px;"></span>
             <br /><br />
-            There aren't any pictures to display at this time. Check back later!
+            No pictures here. Check back later.
             <br /><br />
         </h4>
         @else
